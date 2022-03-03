@@ -1,0 +1,9 @@
+#theme by qube#3925
+
+#use this however you want, you have permission from me to do with this whatever you want
+
+#basically just a combination of a bunch of css shit i found that i like
+#the colors are of the Roundrect theme by KawaiiZenbo#8387
+#this theme is also made for using discord in a vertical split with another program, because you usually cant read shit because the reading area is so tiny. i collapsed the sidebars to fix that issue, go to the top left corner to see the channel list
+
+#have fun!

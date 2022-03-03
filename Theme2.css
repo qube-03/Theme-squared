@@ -1,0 +1,549 @@
+/* this is dumb */
+
+
+
+
+* {
+  border-radius: 1px !important;
+  mask: none !important;
+}
+
+
+
+
+
+/* Server List */
+[class*="wrapper-"][class*="guilds-"][aria-label] {
+    z-index: 9999;
+}
+
+[class*="sidebar-"] [aria-controls*="popout_"]{
+    z-index: 50;
+}
+
+/* Channel List */
+[class*="base-"] [class*="sidebar-"] {
+    position: fixed;
+    z-index: 999;
+    top: 10px;
+    bottom: 0;
+    left: -236px;
+    border-radius: 0;
+}
+
+/* Hover to channelname and sidebar */
+[class*="base-"] [class*="sidebar-"]:hover {
+    left: 72px;
+}
+
+/* Hover to channelname and sidebar to hide pill*/
+[class*="base-"] [class*="sidebar-"]:hover [class*="modeUnread-"]::after {
+    transform: scale(0);
+}
+
+/* Titlebar */
+[class*="base-"] [class*="title-"] {
+    z-index: 30;
+}
+
+/* Add mask for titlebar */
+[class*="base-"] [class*="sidebar-"]::before {
+    content: "";
+    position: fixed;
+    left: 8px;
+    top: 4px;
+    width: 300px;
+    height: 80px;
+    z-index: 999;
+}
+
+/* Unread Channel Pill */
+[class*="base-"] [class*="sidebar-"] [class*="modeUnread-"]::after {
+    content: "";
+    position: fixed;
+    top: 1000px;
+    left: -40px;
+    width: 91px;
+    height: 9999px;
+}
+
+/* Move the mask, pill, and channel down when streamer mode is enabled */
+[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"],
+[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"]::before {
+    top: 58px;
+}
+
+[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"] [class*="modeUnread-"]::after {
+    top: 78px !important;
+}
+
+
+
+
+
+
+
+
+
+.wrapper-25eVIn svg {
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+.content-yTz4x3:before { /* Fix topbar shadow */
+    z-index: 12;
+}
+[class*="membersWrap-"] {
+    margin-right: -180px;
+    transition: transform 0s;
+    z-index: 10;
+}
+[class*="membersWrap-"]:hover,
+[class*="membersWrap-"]:focus,
+[class*="membersWrap-"]:focus-within {
+    transform: translatex(-175px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Improved user name + banner */
+/* Banner + avatar */
+#app-mount .userPopout-2j1gM4 .banner-1YaD3N { height: 124px; }
+#app-mount .userPopout-2j1gM4 .banner-1YaD3N div { display: none; }
+#app-mount .userPopout-2j1gM4 [class*="avatarPosition"] { top: 16px; }
+#app-mount .userPopout-2j1gM4 .avatar-2Vndt_ {
+  filter: drop-shadow(0px 0px 5px black);
+  border: 6px solid transparent;
+  background-color: rgb(0,0,0,0.25);
+}
+
+/* Name display */
+#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF {
+  padding: 8px 16px;
+  background-image: linear-gradient(to left, var(--background-floating), rgb(0,0,0,0.5));
+  border-top-right-radius: inherit;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  right: 0;
+  width: 144px;
+  height: 108px;
+}
+
+/* Badges */
+#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF .headerText-1-WmDq { margin: auto 0; }
+#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF .profileBadges-2pItdR {
+  justify-content: flex-start;
+  position: initial;
+}
+
+#app-mount .userPopout-2j1gM4 .body-2wLx-E { padding: 8px 16px 0px; }
+
+
+
+
+
+
+
+
+
+.messagesPopoutWrap-3zryHW{
+  max-height:70vh !important;
+  width:50vw;
+}
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Jetbrains Mono'; !important}
+
+
+
+
+
+
+
+
+
+
+
+.tutorialContainer-1pL9QS .homeIcon-r0w4ny path {
+    d: path("M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z");
+    transform: translate(2px, -1px) scale(0.94);
+}
+
+
+
+
+
+
+
+
+
+
+/* Move settings (3rd, hence :nth-child(3)) button */
+.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(3) {
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+}
+
+/* Decrease height of server list to make room for settings button */
+.guilds-2JjMmN {
+    margin-bottom: 53px;
+}
+
+/* Make the background distinct */
+.container-1eFtFS {
+  background: var(--background-secondary);
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-3gdLxP {
+  padding: 0px;
+}
+
+.inner-NQg18Y {
+  padding-top: 4px;
+}
+
+.channelTextArea-1VQBuV {
+  margin-bottom: 0px;
+}
+
+.base-3bcbY3 {
+  top: -24px;
+  left: 0px;
+  width: fit-content;
+  padding-right: 9px;
+  border-radius: 0 8px 0 0;
+  background-color: var(--channeltextarea-background);
+}
+
+.scrollableContainer-15eg7h {
+  border-radius: 0px;
+  min-height: 53px;
+}
+
+
+
+
+
+
+
+
+
+.clamped-2ZePhX {
+  -webkit-line-clamp: unset;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* roundrect */
+.mentioned-Tre-dv
+{
+    background-color: rgba(var(--hv-mention-colour-rgb), 0.1) !important;
+}
+
+.mentioned-Tre-dv:hover
+{
+    background-color: rgba(var(--hv-mention-colour-rgb), 0.08) !important;
+}
+
+div[class*="mentioned"]::before 
+{
+    width: 4px;
+    background-color: var(--hv-mention-colour);
+}
+  
+div[class*="mentioned"] 
+{
+    border-radius: 0px 20px 20px 0px;
+}
+
+
+
+
+
+:root
+{
+    --background-tertiary: var(--bg4);
+    --background-secondary: var(--bg3);
+    --background-secondary-alt: var(--bg3);
+    --background-primary: var(--bg1);
+    --channeltextarea-background: var(--bg3);
+    --background-accent: #6e85d3;
+    --background-message-hover: var(--bg2);
+    --background-modifier-hover: var(--bg2);
+    --background-modifier-active: var(--bg4);
+    --background-floating: var(--bg3);
+    --elevation-low: none;
+    --scrollbar-auto-thumb: var(--bg4);
+    --scrollbar-auto-track: var(--bg1);
+    --scrollbar-thin-thumb: var(--bg4);
+    --activity-card-background: var(--bg3);
+}
+
+.theme-dark
+{
+  --background-modifier-selected: var(--bg4);
+}
+
+.theme-light {
+    --text-normal: #101010;
+    --channels-default: #303030;
+    --text-muted: #404040;
+    --interactive-muted: #999999;
+
+    --bg1: #FFFFFF;
+    --bg2: #F7F7F7;
+    --bg3: #F0F0F0;
+    --bg4: #E0E0E0;
+}
+
+.theme-light .embedFull-1HGV2S
+{
+    background-color: var(--bg4);
+}
+
+.peopleColumn-1wMU14 
+{
+    background: var(--background-primary);
+}
+
+
+
+
+/* remove stupid shit/shit i keep clicking on on accident >:( */
+div.iconWrapper-2awDjA.clickable-ZD7xvu[aria-label="Help"],
+.wordmarkWindows-2dq6rw,
+div[id="user-context-invite-to-server"],
+div[id="user-context-call"],
+.guildIconContainer-2FW_iA 
+{
+    display: none !important;
+}
+
+/* nicer buttons */
+.winButtonClose-3Q8ZH5 
+{
+    height: 20px;
+    width: 20px;
+    right: 1px;
+    top: -3px;
+}
+  
+.winButtonMinMax-3RsPUg:nth-child(3) 
+{
+    height: 20px;
+    width: 20px;
+    right: 3px;
+    top: -3px;
+}
+  
+.winButtonMinMax-3RsPUg:nth-child(4) 
+{
+    height: 20px;
+    width: 20px;
+    right: 5px;
+    top: -3px;
+}
+
+/* reorder top bar */
+.searchBar-zdmu7v 
+{
+    width: 240px;
+}
+
+.iconWrapper-2awDjA 
+{
+    order: -1;
+}
+
+/* remove that weird curve near the top left on windows */
+.platform-win .sidebar-1tnWFu 
+{
+    border-radius: 0 0 0 0;
+}
+
+/* settings wide */
+.contentRegion-3HkfJJ 
+{
+    flex: 1 1 100%;
+}
+  
+.contentColumn-1C7as6,
+.customColumn-2n-oKU,
+.sidebarScrollable-2mW9Ls+.content-2ssVKB,
+.customScroller-m1-jZn>div 
+{
+    max-width: 95%;
+}
+  
+.sidebar-nqHbhN 
+{
+    padding: 60px 0 35px 50px;
+    width: 260px;
+}
+  
+.sidebar-nqHbhN>div>.item-3XjbnG,
+#bd-settings-sidebar .ui-tab-bar-item 
+{
+    padding: 8px 0 8px 10px;
+    margin-bottom: 0;
+}
+
+/* role indicators on user profile */
+.role-2TIOKu 
+{
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: solid;
+    border-width: 0px 0px 0px 2px;
+}
+
+.roleCircle-1EgnFN 
+{
+    width: 5 !important;
+    height: 5 !important;
+}
+
+.roleCircle-1EgnFN::before 
+{
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* server channels */
+.content-1gYQeQ 
+{
+    background-color: var(--bg4);
+    border-style: solid;
+    border-color: #666666;
+    border-width: 0px 0px 0px 4px;
+}
+
+.unread-36eUEm 
+{
+    z-index: 1;
+    position: absolute;
+    height: 32px;
+    width: 4px;
+    top: 1px;
+    left: 8px;
+    margin-top: 0px;
+}
+
+/* message text box */
+.scrollableContainer-15eg7h 
+{
+    border: solid;
+    border-color: var(--bg4);
+    border-width: 0px 0px 0px 4px;
+}
+
+/* status indicators that are broken for no reason sometimes */
+.svg-2azL_l rect 
+{
+  mask: var(--avatar-shape);
+  stroke-width: 2px;
+  stroke: var(--bg3);
+}
+
+/* embed round on one side */
+.embedFull-1HGV2S 
+{
+  border-radius: 0px 20px 20px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* revertrebrand stuff */
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/hardcoded.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/reactions.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/folders.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/inputs.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/svgs.css");
+@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/other.css");
+
+/* modules */
+@import "./modules/main.scss";
+@import "./modules/tweaks.scss";
+@import "./modules/roundavatar.scss";
+@import "./modules/hi-color.scss";
+
+:root {
+  /* colours (only works in dark mode) */
+  --bg1: rgb(24, 28, 37);
+  --bg2: rgb(22, 26, 35);
+  --bg3: rgb(20, 24, 33);
+  --bg4: rgb(18, 22, 31);
+
+  --avatar-shape: 20%;
+  
+  /* hi-color settings */
+  --hv-mention-colour: #037878;
+  --hv-mention-colour-rgb: 3, 120, 120;
+}
