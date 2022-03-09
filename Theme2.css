@@ -182,7 +182,9 @@
 
 
 body {
-  font-family: 'Jetbrains Mono'; !important}
+  font-family: 'Terminus (TTF)'; !important
+  font-size: 18px;
+  }
 
 
 
