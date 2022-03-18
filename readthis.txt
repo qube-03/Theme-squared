@@ -8,7 +8,7 @@
 
 
 #dependencies afaik:
-#    Terminus (TTF) Font
+#    JetBrains Mono Font
 
 
 #have fun!
