@@ -1,10 +1,5 @@
-/* this is dumb */
-
-
-
-
 * {
-  border-radius: 1px !important;
+  border-radius: 2px !important;
   mask: none !important;
 }
 
@@ -24,7 +19,7 @@
 /* Channel List */
 [class*="base-"] [class*="sidebar-"] {
     position: fixed;
-    z-index: 999;
+    z-index: 40;
     top: 10px;
     bottom: 0;
     left: -236px;
@@ -50,21 +45,11 @@
 [class*="base-"] [class*="sidebar-"]::before {
     content: "";
     position: fixed;
-    left: 8px;
-    top: 4px;
+    left: 0px;
+    top: 0px;
     width: 300px;
     height: 80px;
     z-index: 999;
-}
-
-/* Unread Channel Pill */
-[class*="base-"] [class*="sidebar-"] [class*="modeUnread-"]::after {
-    content: "";
-    position: fixed;
-    top: 1000px;
-    left: -40px;
-    width: 91px;
-    height: 9999px;
 }
 
 /* Move the mask, pill, and channel down when streamer mode is enabled */
@@ -98,9 +83,6 @@
 
 
 
-.content-yTz4x3:before { /* Fix topbar shadow */
-    z-index: 12;
-}
 [class*="membersWrap-"] {
     margin-right: -180px;
     transition: transform 0s;
@@ -171,7 +153,9 @@
 
 .messagesPopoutWrap-3zryHW{
   max-height:70vh !important;
-  width:50vw;
+  width:70vw;
+  position: fixed;
+  right: 100px;
 }
 
 
@@ -185,21 +169,6 @@ body {
   font-family: 'JetBrains Mono'; !important
   font-size: 18px;
   }
-
-
-
-
-
-
-
-
-
-
-
-.tutorialContainer-1pL9QS .homeIcon-r0w4ny path {
-    d: path("M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z");
-    transform: translate(2px, -1px) scale(0.94);
-}
 
 
 
@@ -231,45 +200,19 @@ body {
 
 
 
-
-
 .form-3gdLxP {
   padding: 0px;
 }
 
 .inner-NQg18Y {
-  padding-top: 4px;
+  padding-top: 6px;
+  padding-bottom: 3px;
 }
 
 .channelTextArea-1VQBuV {
   margin-bottom: 0px;
 }
 
-.base-3bcbY3 {
-  top: -24px;
-  left: 0px;
-  width: fit-content;
-  padding-right: 9px;
-  border-radius: 0 8px 0 0;
-  background-color: var(--channeltextarea-background);
-}
-
-.scrollableContainer-15eg7h {
-  border-radius: 0px;
-  min-height: 53px;
-}
-
-
-
-
-
-
-
-
-
-.clamped-2ZePhX {
-  -webkit-line-clamp: unset;
-}
 
 
 
@@ -331,23 +274,6 @@ div[class*="mentioned"]
   --background-modifier-selected: var(--bg4);
 }
 
-.theme-light {
-    --text-normal: #101010;
-    --channels-default: #303030;
-    --text-muted: #404040;
-    --interactive-muted: #999999;
-
-    --bg1: #FFFFFF;
-    --bg2: #F7F7F7;
-    --bg3: #F0F0F0;
-    --bg4: #E0E0E0;
-}
-
-.theme-light .embedFull-1HGV2S
-{
-    background-color: var(--bg4);
-}
-
 .peopleColumn-1wMU14 
 {
     background: var(--background-primary);
@@ -366,37 +292,7 @@ div[id="user-context-call"],
     display: none !important;
 }
 
-/* nicer buttons */
-.winButtonClose-3Q8ZH5 
-{
-    height: 20px;
-    width: 20px;
-    right: 1px;
-    top: -3px;
-}
-  
-.winButtonMinMax-3RsPUg:nth-child(3) 
-{
-    height: 20px;
-    width: 20px;
-    right: 3px;
-    top: -3px;
-}
-  
-.winButtonMinMax-3RsPUg:nth-child(4) 
-{
-    height: 20px;
-    width: 20px;
-    right: 5px;
-    top: -3px;
-}
-
 /* reorder top bar */
-.searchBar-zdmu7v 
-{
-    width: 240px;
-}
-
 .iconWrapper-2awDjA 
 {
     order: -1;
@@ -408,69 +304,10 @@ div[id="user-context-call"],
     border-radius: 0 0 0 0;
 }
 
-/* settings wide */
-.contentRegion-3HkfJJ 
-{
-    flex: 1 1 100%;
-}
-  
-.contentColumn-1C7as6,
-.customColumn-2n-oKU,
-.sidebarScrollable-2mW9Ls+.content-2ssVKB,
-.customScroller-m1-jZn>div 
-{
-    max-width: 95%;
-}
-  
-.sidebar-nqHbhN 
-{
-    padding: 60px 0 35px 50px;
-    width: 260px;
-}
-  
-.sidebar-nqHbhN>div>.item-3XjbnG,
-#bd-settings-sidebar .ui-tab-bar-item 
-{
-    padding: 8px 0 8px 10px;
-    margin-bottom: 0;
-}
-
-/* role indicators on user profile */
-.role-2TIOKu 
-{
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    border: solid;
-    border-width: 0px 0px 0px 2px;
-}
-
-.roleCircle-1EgnFN 
-{
-    width: 5 !important;
-    height: 5 !important;
-}
-
-.roleCircle-1EgnFN::before 
-{
-    position: absolute;
-    content: "";
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    opacity: 0.3;
-    z-index: -1;
-}
-
 /* server channels */
 .content-1gYQeQ 
 {
     background-color: var(--bg4);
-    border-style: solid;
-    border-color: #666666;
-    border-width: 0px 0px 0px 4px;
 }
 
 .unread-36eUEm 
@@ -484,53 +321,19 @@ div[id="user-context-call"],
     margin-top: 0px;
 }
 
-/* message text box */
-.scrollableContainer-15eg7h 
-{
-    border: solid;
-    border-color: var(--bg4);
-    border-width: 0px 0px 0px 4px;
-}
-
 /* status indicators that are broken for no reason sometimes */
 .svg-2azL_l rect 
 {
-  mask: var(--avatar-shape);
   stroke-width: 2px;
   stroke: var(--bg3);
 }
 
-/* embed round on one side */
-.embedFull-1HGV2S 
-{
-  border-radius: 0px 20px 20px 0px;
-}
 
 
 
 
 
 
-
-
-
-
-
-/* revertrebrand stuff */
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/variables.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/hardcoded.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/mentions.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/reactions.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/components/folders.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/inputs.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/svgs.css");
-@import url("https://Goose-Nest.github.io/GT-RevertRebrand/src/general/other.css");
-
-/* modules */
-@import "./modules/main.scss";
-@import "./modules/tweaks.scss";
-@import "./modules/roundavatar.scss";
-@import "./modules/hi-color.scss";
 
 :root {
   /* colours (only works in dark mode) */
