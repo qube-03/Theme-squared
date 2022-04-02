@@ -1,350 +1,185 @@
-* {
-  border-radius: 2px !important;
-  mask: none !important;
-}
+*:not(.message-2CShn3 .header-2jRmjb) { border-radius: 4px !important;
+  mask: none !important; } /* make everything relatively square */
+
+
+
+.sidebar-1tnWFu /* move channelbar wayyy to the left */
+{ position: fixed;
+ z-index: 40;
+ top: 10px;
+ bottom: 0;
+ left: -999px;
+ border-radius: 0; }
+
+.sidebar-1tnWFu:hover /* appearance of the channelbar when its there */
+{ left: 72px; 
+  width: 320px;}
+
+.sidebar-1tnWFu::before /* reveal channelbar */
+{ content: "";
+  position: fixed;
+  left: 72px;
+  top: 0px;
+  width: 270px;
+  height: 80px;
+  z-index: 1; }
+
+.title-31SJ6t /* make the title bar go below the channelbar */
+{ z-index: 30; }
 
 
 
 
-
-/* Server List */
-[class*="wrapper-"][class*="guilds-"][aria-label] {
-    z-index: 9999;
-}
-
-[class*="sidebar-"] [aria-controls*="popout_"]{
-    z-index: 50;
-}
-
-/* Channel List */
-[class*="base-"] [class*="sidebar-"] {
-    position: fixed;
-    z-index: 40;
-    top: 10px;
-    bottom: 0;
-    left: -236px;
-    border-radius: 0;
-}
-
-/* Hover to channelname and sidebar */
-[class*="base-"] [class*="sidebar-"]:hover {
-    left: 72px;
-}
-
-/* Hover to channelname and sidebar to hide pill*/
-[class*="base-"] [class*="sidebar-"]:hover [class*="modeUnread-"]::after {
-    transform: scale(0);
-}
-
-/* Titlebar */
-[class*="base-"] [class*="title-"] {
-    z-index: 30;
-}
-
-/* Add mask for titlebar */
-[class*="base-"] [class*="sidebar-"]::before {
-    content: "";
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 300px;
-    height: 80px;
-    z-index: 999;
-}
-
-/* Move the mask, pill, and channel down when streamer mode is enabled */
-[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"],
-[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"]::before {
-    top: 58px;
-}
-
-[class*="notice-"][class*="colorStreamerMode-"] + [class*="content-"] > [class*="sidebar-"] [class*="modeUnread-"]::after {
-    top: 78px !important;
-}
-
-
-
-
-
-
-
-
-
-.wrapper-25eVIn svg {
-    overflow: hidden;
-}
-
-
-
-
-
-
-
-
-
-
-[class*="membersWrap-"] {
-    margin-right: -180px;
-    transition: transform 0s;
-    z-index: 10;
-}
-[class*="membersWrap-"]:hover,
-[class*="membersWrap-"]:focus,
-[class*="membersWrap-"]:focus-within {
-    transform: translatex(-180px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Improved user name + banner */
-/* Banner + avatar */
-#app-mount .userPopout-2j1gM4 .banner-1YaD3N { height: 124px; }
-#app-mount .userPopout-2j1gM4 .banner-1YaD3N div { display: none; }
-#app-mount .userPopout-2j1gM4 [class*="avatarPosition"] { top: 16px; }
-#app-mount .userPopout-2j1gM4 .avatar-2Vndt_ {
-  filter: drop-shadow(0px 0px 5px black);
-  border: 6px solid transparent;
-  background-color: rgb(0,0,0,0.25);
-}
-
-/* Name display */
-#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF {
-  padding: 8px 16px;
-  background-image: linear-gradient(to left, var(--background-floating), rgb(0,0,0,0.5));
-  border-top-right-radius: inherit;
+.notice-2HEN-u.colorStreamerMode-8uoRWd /* make the streamer mode notification better */
+{ width: flex;
+  height: 30px;
+  line-height: 30px;
   position: absolute;
-  display: flex;
-  flex-direction: column-reverse;
-  right: 0;
-  width: 144px;
-  height: 108px;
-}
+  right: 170px;
+  top: 8px; }
 
-/* Badges */
-#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF .headerText-1-WmDq { margin: auto 0; }
-#app-mount .userPopout-2j1gM4 .headerTop-3GPUSF .profileBadges-2pItdR {
-  justify-content: flex-start;
-  position: initial;
-}
-
-#app-mount .userPopout-2j1gM4 .body-2wLx-E { padding: 8px 16px 0px; }
+.closeButton-30b1gR,
+.button-1iHNQ2
+{ height: 23px; 
+  line-height: 23px; 
+  top: 4px;}
 
 
 
 
+.membersWrap-3NUR2t /* hide members and reveal on hover */
+{ margin-right: -180px;
+  transition: transform 0s;
+  z-index: 10; }
+.membersWrap-3NUR2t:hover,
+.membersWrap-3NUR2t:focus,
+.membersWrap-3NUR2t:focus-within
+{ transform: translatex(-180px); }
 
 
 
 
-
-.messagesPopoutWrap-3zryHW{
-  max-height:70vh !important;
+.messagesPopoutWrap-3zryHW /* make pinned messages a little wider */
+{ max-height:70vh !important;
   width:70vw;
   position: fixed;
-  right: 100px;
-}
+  right: 100px; }
 
 
 
 
+.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(3) 
+{ position: fixed;
+  bottom: 10px;
+  left: 20px; } /* Move settings (3rd, hence :nth-child(3)) button */
+.guilds-2JjMmN 
+{ margin-bottom: 53px; } /* decrease height of server list to make room for settings button */
+.layer-2aCOJ3[style="position: absolute; bottom: 50.0796px; left: -31px;"]
+{ display: none; } /* delete the dumbass tooltip */
+.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(3) svg 
+{ width: 24px;
+  height: 24px; } /* make the cogwheel bigger */
 
 
 
 
-body {
-  font-family: 'JetBrains Mono'; !important
-  font-size: 18px;
-  }
+.form-3gdLxP /* make the text area better */
+{ padding: 0px; }
+.inner-NQg18Y 
+{ padding-top: 6px;
+  padding-bottom: 3px; }
+.channelTextArea-1VQBuV 
+{ margin-bottom: 0px; }
 
+.typing-2J1mQU
+{/* do this */}
 
 
 
 
-
-
-
-
-
-/* Move settings (3rd, hence :nth-child(3)) button */
-.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(3) {
-    position: fixed;
-    bottom: 10px;
-    left: 20px;
-}
-
-/* Decrease height of server list to make room for settings button */
-.guilds-2JjMmN {
-    margin-bottom: 53px;
-}
-
-
-
-
-
-
-
-
-
-
-.form-3gdLxP {
-  padding: 0px;
-}
-
-.inner-NQg18Y {
-  padding-top: 6px;
-  padding-bottom: 3px;
-}
-
-.channelTextArea-1VQBuV {
-  margin-bottom: 0px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* roundrect */
-.mentioned-Tre-dv
-{
-    background-color: rgba(var(--hv-mention-colour-rgb), 0.1) !important;
-}
-
-.mentioned-Tre-dv:hover
-{
-    background-color: rgba(var(--hv-mention-colour-rgb), 0.08) !important;
-}
-
-div[class*="mentioned"]::before 
-{
-    width: 4px;
-    background-color: var(--hv-mention-colour);
-}
-  
-div[class*="mentioned"] 
-{
-    border-radius: 0px 20px 20px 0px;
-}
-
-
-
-
-
-:root
-{
-    --background-tertiary: var(--bg4);
-    --background-secondary: var(--bg3);
-    --background-secondary-alt: var(--bg3);
-    --background-primary: var(--bg1);
-    --channeltextarea-background: var(--bg3);
-    --background-accent: #6e85d3;
-    --background-message-hover: var(--bg2);
-    --background-modifier-hover: var(--bg2);
-    --background-modifier-active: var(--bg4);
-    --background-floating: var(--bg3);
-    --elevation-low: none;
-    --scrollbar-auto-thumb: var(--bg4);
-    --scrollbar-auto-track: var(--bg1);
-    --scrollbar-thin-thumb: var(--bg4);
-    --activity-card-background: var(--bg3);
-}
-
-.theme-dark
-{
-  --background-modifier-selected: var(--bg4);
-}
-
-.peopleColumn-1wMU14 
-{
-    background: var(--background-primary);
-}
-
-
-
-
-/* remove stupid shit/shit i keep clicking on on accident >:( */
-div.iconWrapper-2awDjA.clickable-ZD7xvu[aria-label="Help"],
-.wordmarkWindows-2dq6rw,
-div[id="user-context-invite-to-server"],
-div[id="user-context-call"],
-.guildIconContainer-2FW_iA 
-{
-    display: none !important;
-}
-
-/* reorder top bar */
-.iconWrapper-2awDjA 
-{
-    order: -1;
-}
-
-/* remove that weird curve near the top left on windows */
-.platform-win .sidebar-1tnWFu 
-{
-    border-radius: 0 0 0 0;
-}
-
-/* server channels */
-.content-1gYQeQ 
-{
-    background-color: var(--bg4);
-}
-
-.unread-36eUEm 
-{
-    z-index: 1;
-    position: absolute;
-    height: 32px;
-    width: 4px;
-    top: 1px;
-    left: 8px;
-    margin-top: 0px;
-}
-
-/* status indicators that are broken for no reason sometimes */
-.svg-2azL_l rect 
-{
-  stroke-width: 2px;
-  stroke: var(--bg3);
-}
-
-
-
-
-
-
-
-
-:root {
-  /* colours (only works in dark mode) */
-  --bg1: rgb(24, 28, 37);
+:root /* colors */
+{ --bg1: rgb(24, 28, 37);
   --bg2: rgb(22, 26, 35);
   --bg3: rgb(20, 24, 33);
   --bg4: rgb(18, 22, 31);
+  --background-tertiary: var(--bg4);
+  --background-secondary: var(--bg3);
+  --background-secondary-alt: var(--bg3);
+  --background-primary: var(--bg1);
+  --channeltextarea-background: var(--bg3);
+  --background-accent: #6e85d3;
+  --background-message-hover: var(--bg2);
+  --background-modifier-hover: var(--bg2);
+  --background-modifier-active: var(--bg4);
+  --background-floating: var(--bg3);
+  --elevation-low: none;
+  --scrollbar-auto-thumb: var(--bg4);
+  --scrollbar-auto-track: var(--bg1);
+  --scrollbar-thin-thumb: var(--bg4);
+  --activity-card-background: var(--bg3); }
 
-  --avatar-shape: 20%;
-  
-  /* hi-color settings */
-  --hv-mention-colour: #037878;
-  --hv-mention-colour-rgb: 3, 120, 120;
-}
+.theme-dark
+{ --background-modifier-selected: var(--bg4); }
+
+.peopleColumn-1wMU14 
+{ background: var(--background-primary); }
+
+/* server channels */
+.content-1gYQeQ 
+{ background-color: var(--bg4); }
+
+.unread-36eUEm 
+{ z-index: 1;
+  position: absolute;
+  height: 32px;
+  width: 4px;
+  top: 1px;
+  left: 8px;
+  margin-top: 0px; }
+
+/* status indicators that are broken for no reason sometimes */
+.svg-2azL_l
+{ stroke-width: 2px;
+  stroke: var(--bg3); }
+
+
+.input-3r5zZY {background-color: var(--bg1);}
+.container-2McqkF {background-color: #030303;}
+.resultsGroup-cfY57t {background-color: var(--bg1);}
+.peopleColumn-1wMU14 {background-color: var(--bg1);}
+
+
+.iconWrapper-2awDjA,
+.buttons-uaqb-5,
+.tutorialContainer-2jwoiB+div,
+.circleIconButton-1VxDrg,
+.searchBar-3TnChZ,
+.option-ayUoaq::after
+{display: none;}
+
+
+
+
+.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(2)
+{ width: 60px; 
+  height: 20px;
+  top: 8px; 
+  right: 10px; }
+.container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(2) svg
+{ width: 80px; 
+  height: 32px;
+  background-color: #f00; }
+
+
+.message-2CShn3
+{ background-color: var(--bg3); 
+  margin-left: 8px;
+  border-radius: 10px; }
+.message-2CShn3.cozyMessage-1DWF9U.mentioned-Tre-dv.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz
+  { background-color: #002534; }
+.message-2CShn3.cozyMessage-1DWF9U.mentioned-Tre-dv.wrapper-30-Nkg.cozy-VmLDNB.zalgo-26OfGz::before
+{ display: none; }
+.avatar-2e8lTP.clickable-31pE3P
+{ margin-top: 6px;
+  width: 2.2em;
+  height: 2.2em; }
