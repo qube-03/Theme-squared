@@ -13,7 +13,7 @@
 
 .sidebar-1tnWFu:hover /* appearance of the channelbar when its there */
 { left: 72px; 
-  width: 320px;}
+  width: 240px;}
 
 .sidebar-1tnWFu::before /* reveal channelbar */
 { content: "";
@@ -98,10 +98,10 @@
 
 
 :root /* colors */
-{ --bg1: rgb(24, 28, 37);
-  --bg2: rgb(22, 26, 35);
-  --bg3: rgb(20, 24, 33);
-  --bg4: rgb(18, 22, 31);
+{ --bg1: #131519;
+  --bg2: #131519;
+  --bg3: #0f0f12;
+  --bg4: #131519;
   --background-tertiary: var(--bg4);
   --background-secondary: var(--bg3);
   --background-secondary-alt: var(--bg3);
