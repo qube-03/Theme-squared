@@ -74,12 +74,9 @@
   left: 20px; } /* Move settings (3rd, hence :nth-child(3)) button */
 .guilds-2JjMmN 
 { margin-bottom: 53px; } /* decrease height of server list to make room for settings button */
-.layer-2aCOJ3[style="position: absolute; bottom: 50.0796px; left: -31px;"]
-{ display: none; } /* delete the dumbass tooltip */
 .container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(3) svg 
 { width: 24px;
   height: 24px; } /* make the cogwheel bigger */
-
 
 
 
@@ -90,10 +87,11 @@
   padding-bottom: 3px; }
 .channelTextArea-1VQBuV 
 { margin-bottom: 0px; }
-
-.typing-2J1mQU
-{/* do this */}
-
+.typing-2J1mQU 
+{ top: -28px;
+  left: 0px;
+  padding-top: 4px;
+  z-index: 99; }
 
 
 
@@ -118,16 +116,19 @@
   --scrollbar-thin-thumb: var(--bg4);
   --activity-card-background: var(--bg3); }
 
-.theme-dark
+.theme-dark /* applying colors */
 { --background-modifier-selected: var(--bg4); }
-
 .peopleColumn-1wMU14 
 { background: var(--background-primary); }
+.content-1gYQeQ { background-color: var(--bg4); } /* server channels */ 
+.input-3r5zZY {background-color: var(--bg1);}
+.container-2McqkF {background-color: #030303;}
+.resultsGroup-cfY57t {background-color: var(--bg1);}
+.peopleColumn-1wMU14 {background-color: var(--bg1);}
 
-/* server channels */
-.content-1gYQeQ 
-{ background-color: var(--bg4); }
 
+
+/* miscellaneous */
 .unread-36eUEm 
 { z-index: 1;
   position: absolute;
@@ -136,30 +137,9 @@
   top: 1px;
   left: 8px;
   margin-top: 0px; }
-
-/* status indicators that are broken for no reason sometimes */
 .svg-2azL_l
 { stroke-width: 2px;
   stroke: var(--bg3); }
-
-
-.input-3r5zZY {background-color: var(--bg1);}
-.container-2McqkF {background-color: #030303;}
-.resultsGroup-cfY57t {background-color: var(--bg1);}
-.peopleColumn-1wMU14 {background-color: var(--bg1);}
-
-
-.iconWrapper-2awDjA,
-.buttons-uaqb-5,
-.tutorialContainer-2jwoiB+div,
-.circleIconButton-1VxDrg,
-.searchBar-3TnChZ,
-.option-ayUoaq::after
-{display: none;}
-
-
-
-
 .container-YkUktl:last-of-type>.flex-2S1XBF.flex-3BkGQD :nth-child(2)
 { width: 60px; 
   height: 20px;
@@ -169,8 +149,6 @@
 { width: 80px; 
   height: 32px;
   background-color: #f00; }
-
-
 .message-2CShn3
 { background-color: var(--bg3); 
   margin-left: 8px;
@@ -183,3 +161,13 @@
 { margin-top: 6px;
   width: 2.2em;
   height: 2.2em; }
+
+
+
+/* removal */
+.layer-2aCOJ3[style="position: absolute; bottom: 50.0796px; left: -31px;"], /* delete the dumbass tooltip */
+.iconWrapper-2awDjA,
+.buttons-uaqb-5,
+.searchBar-3TnChZ,
+.option-ayUoaq::after
+{display: none;} 
